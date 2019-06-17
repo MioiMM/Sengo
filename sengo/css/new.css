@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+*{border:0;margin:0;padding:0;}
+body{font-family:'微软雅黑'; margin:0 auto;}
+ul{display:block;margin:0;padding:0;list-style:none;}
+li{display:block;margin:0;padding:0;list-style: none;}
+img{border:0;}
+dl,dt,dd,span{margin:0;padding:0;display:inline-block;}
+a,a:focus{text-decoration:none;color:#000;outline:none;blr:expression(this.onFocus=this.blur());}
+a:hover{text-decoration:none;}
+table{border-collapse:collapse;border-spacing: 0;}
+i,cite{font-style:normal; display:inline-block}
+h1,h2{font-weight:normal;}
+input,textarea{ outline:none}
+
+
+/*采摘工具头部*/
+.head{ width:773px; margin:50px auto 0 auto; padding-bottom:18px; border-bottom:1px solid #74b000; color:#74b000; font-size:14px; overflow:hidden}
+.head i{ float:left}
+.head span{float:left; margin-top:30px; margin-left:15px}
+
+/*采摘工具main*/
+.click-main{ overflow:hidden;width:777px; margin:27px auto}
+.cm-l{ float:left;width:540px;}
+.cm-l p,.cm-l p a{ font-size:13px; color:#898989; margin-bottom:10px}
+.cm-l i{ width:247px; height:187px; margin-top:20px}
+.cm-l i img{ width:247px; height:187px;}
+.cm-l textarea{ display:block; width:405px; max-width:405px; padding-left:5px; margin-top:20px; border:solid 1px #b9d77f; padding-top:5px; height:85px; max-height:85px; font-size:13px}
+.cm-l input{ display:block; width:79px; height:30px; text-align:center; line-height:30px; border-radius:4px; background:url(../images/kb_bt.png) repeat-x; margin-top:10px; color:#ffffff; font-size:14px; font-family:"微软雅黑"; cursor:pointer; clear:both;}
+.cm-l ul li{ float:left; width:123px; height:92px; background:#CCC; margin-right:10px; margin-bottom:10px}
+.cm-l ul li img{ width:123px; height:92px}
+
+.cm-r{ float:left; width:237px;}
+.cm-r ul li{ margin-bottom:15px}
+.cm-r ul li p{ color:#898989; font-size:13px; margin-left:10px; margin-bottom:5px}
+.cm-r ul li textarea{ width:220px; max-width:215px; height:65px; max-height:65px; padding-left:5px; padding-top:5px; border:1px solid #b9d77f; margin-left:8px}
+.cm-r select{display: none;}
+#choose{ border:solid 1px #FF0000} 
+.select_box{font-size: 13px;color: #898989;width: 223px;line-height: 35px;margin:auto;}
+.select_showbox{border: 1px solid #b9d77f;height: 35px;padding-left: 5px;background:url(../images/st_arrow.png) no-repeat 190px 15px;}
+.select_option{border: 1px solid #b9d77f;border-top: none;display: none; max-height:140px; overflow-y:scroll; position:absolute; z-index:101;width: 221px; background:#ffffff}
+.select_option li{padding-left: 5px; margin-bottom:0 !important}
+.select_option li.selected{background-color: #F3F3F3;color: #999;}
+.select_option li.hover{background: #71a92e; color: #fff;}
+.cm-r ul li dl{ overflow-y:scroll; height:110px}
+.cm-r ul li dl dd{ width:66px; line-height:29px; border:solid 1px #b9d77f; border-radius:4px; font-size:12px; text-align:center; float:left; margin-right:5px; margin-bottom:7px}
+.cm-r ul li dl dd a{ color:#74b000}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

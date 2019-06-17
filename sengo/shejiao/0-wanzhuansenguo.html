@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>森果玩转森果</title>
+<link href="../css/pick-fun.css" rel="stylesheet" type="text/css" />
+<link href="../css/web.css" rel="stylesheet" type="text/css" />
+<link href="../css/edit.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="../js/jquery.min.js"></script>
+<script language="javascript" src="../js/gotop.js"></script>
+<script language="javascript" src="../js/divselect.js"></script>
+<script language="javascript" src="../js/style.js"></script>
+</head>
+
+<body>
+<!--right_float_block-->
+<div class="float_block">
+  <div class="right_float_bt1">
+    <div class="pick_tool">
+      <ul>
+        <p>使用<a href="#">采摘工具</a>收集一切美好</p>
+        <li><a href="#"  onclick="ShowDiv('upload_img','fade')"><img src="../images/fenleixuanxiang/images/pick_tool_icon1.png"/>上传图片</a></li>
+        <li><a href="#"  onclick="ShowDiv('web_pick','fade')"><img src="../images/fenleixuanxiang/images/pick_tool_icon2.png"/>按网站搜索</a></li>
+        <li><a href="#"  onclick="ShowDiv('found_fb','fade')"><img src="../images/fenleixuanxiang/images/pick_tool_icon3.png"/>新建果篮</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="right_float_bt2">
+    <div class="rfb_share">
+      <ul>             <li><a href="#"><img src="../images/detial/images/iconfont-weixin.png"/>微信</a></li>
+             <li><a href="#"><img src="../images/detial/images/iconfont-xinlangweibo.png"/>新浪微博</a></li>
+             <li><a href="#"><img src="../images/detial/images/iconfont-txweibo.png"/>腾讯微博</a></li>
+             <li><a href="#"><img src="../images/detial/images/iconfont-qq.png"/>QQ好友</a></li>
+             <li><a href="#"><img src="../images/detial/images/iconfont-douban.png"/>豆瓣</a></li>
+</ul>
+    </div>
+  </div>
+  <div class="right_float_bt3">
+    <div class="help_bg"><a href=""></a></div>
+  </div>
+</div>
+
+<!--弹出层部分-->
+<div id="fade" class="bg_transparent"></div>
+
+<!--上传一张新图片-->
+<div class="upload_img" id="upload_img">
+<div class="close_icon"  onclick="CloseDiv('upload_img','fade')"><img src="../images/fenleixuanxiang/images/close_icon.png"/></div>
+<form method="post" action="" enctype="multipart/form-data">
+<input type="button" onmousemove="f.style.pixelLeft=event.x-60;f.style.pixelTop=this.offsetTop;" value="浏览图片" size="30" onclick="f.click()" class="liulan"><input type="text" id="txt" name="txt" class="upload_img_input">
+<input type="file" id="f" onchange="txt.value=this.value" name="f" style="height:26px;" class="files"  size="1" hidefocus>
+<input name="" type="button" class="shangchuan" value="上传" />
+</form>
+</div>
+<!--新建果篮-->
+<div class="found_fb" id="found_fb">
+  <div class="close_icon"  onclick="CloseDiv('found_fb','fade')"><img src="../images/fenleixuanxiang/images/close_icon.png"/></div>
+  <h2>新建果篮</h2>
+  <div class="found_fb_content">
+    <form action="" method="get">
+       <p class="found_fb_name">名称<input name="" type="text" value="为果篮命名" ; onfocus="this.value = '';" onblur="if (this.value==''){this.value = '为果篮命名'}" /></p>
+       <p class="found_fb_dr">描述<textarea name="">简单描述/关键词</textarea></p>
+       <p class="found_fb_cf">分类 
+         <div id="divselect2">
+          <cite>请选择分类</cite>
+          <ul>
+             <li><a href="javascript:;" selectid="1">婚礼灵感</a></li>
+             <li><a href="javascript:;" selectid="2">婚纱服饰</a></li>
+             <li><a href="javascript:;" selectid="3">海外婚礼</a></li>
+             <li><a href="javascript:;" selectid="4">婚礼纸品</a></li>
+             <li><a href="javascript:;" selectid="5">婚礼配饰</a></li>
+             <li><a href="javascript:;" selectid="6">婚纱色彩</a></li>
+             <li><a href="javascript:;" selectid="7">化妆造型</a></li>
+             <li><a href="javascript:;" selectid="8">婚礼甜品</a></li>
+             <li><a href="javascript:;" selectid="9">宴会设计</a></li>
+             <li><a href="javascript:;" selectid="10">婚纱灯光</a></li>
+             <li><a href="javascript:;" selectid="11">明星婚礼</a></li>
+             <li><a href="javascript:;" selectid="12">美容健身</a></li>
+             <li><a href="javascript:;" selectid="13">名人明星</a></li>
+             <li><a href="javascript:;" selectid="14">美容美发</a></li>
+             <li><a href="javascript:;" selectid="15">家居装饰</a></li>
+             <li><a href="javascript:;" selectid="16">插图海报</a></li>
+             <li><a href="javascript:;" selectid="17">手工DIY</a></li>
+             <li><a href="javascript:;" selectid="18">奢侈品</a></li>
+             <li><a href="javascript:;" selectid="19">花艺</a></li>
+             <li><a href="javascript:;" selectid="20">回礼</a></li>
+             <li><a href="javascript:;" selectid="21">旅行</a></li>
+             <li><a href="javascript:;" selectid="22">派对</a></li>
+             <li><a href="javascript:;" selectid="23">美食</a></li>
+             <li><a href="javascript:;" selectid="24">园艺</a></li>
+             <li><a href="javascript:;" selectid="25">萌宠</a></li>
+             <li><a href="javascript:;" selectid="26">音乐</a></li>
+             <li><a href="javascript:;" selectid="27">时尚</a></li>
+             <li><a href="javascript:;" selectid="28">杂志</a></li>
+             <li><a href="javascript:;" selectid="29">建筑</a></li>
+             <li><a href="javascript:;" selectid="30">设计</a></li>
+             <li><a href="javascript:;" selectid="31">艺术</a></li>
+             <li><a href="javascript:;" selectid="32">科技</a></li>
+             <li><a href="javascript:;" selectid="33">汽车</a></li>
+             <li><a href="javascript:;" selectid="34">礼物</a></li>
+             <li><a href="javascript:;" selectid="35">摄影</a></li>
+             <li><a href="javascript:;" selectid="36">活动</a></li>
+          </ul>
+         </div>
+      <input name="" type="hidden" value="" id="inputselect2"/>
+       </p>
+       <p class="found_fb_bt">
+         <input name="" type="button" class="found_fb_confirm"/>
+         <input name="" type="button" class="found_fb_cancel" style="margin-right:-20px"/>
+       </p>
+    </form>
+  </div>
+</div>
+<!--网站采集-->
+<div class="web_pick" id="web_pick">
+<div class="close_icon" onclick="CloseDiv('web_pick','fade')"><img src="../images/fenleixuanxiang/images/close_icon.png"/></div>
+  <h2>编辑采摘图片</h2>
+  <span>使用<a href="#">采摘工具</a>搜集一切美好</span>
+  <p>
+    <input name="" value="http://" type="text" class="web_pick_text"/><a href="../site_search_next.html" class="web_pick_bt">下一步</a>
+  </p>
+  
+</div>
+<!--编辑采摘图片-->
+<div class="edit_pickimg" id="edit_pickimg">
+ <div class="close_icon"  onclick="CloseDiv('edit_pickimg','fade')"><img src="../images/fenleixuanxiang/images/close_icon.png"/></div>
+  <h2>编辑采摘图片</h2>
+  <div class="edit_pickimg_content">
+    <div class="edit_pickimg_content_left">
+      <div class="found_fb_content">
+    <form action="" method="get">
+         <p class="found_fb_cf" style=" border:none !important ">分类 
+         <div id="divselect3">
+          <cite></cite>
+          <ul>
+             <li><a href="javascript:;" selectid="1"></a></li>
+             <li><a href="javascript:;" selectid="2"></a></li>
+             <li><a href="javascript:;" selectid="3"></a></li>
+             <li><a href="javascript:;" selectid="4"></a></li>
+             <li><a href="javascript:;" selectid="5"></a></li>
+             <li><a href="javascript:;" selectid="6"></a></li>
+          </ul>
+         </div>
+      <input name="" type="hidden" value="" id="inputselect2"/>
+       </p>
+        <p class="edit_pickimg_dr">描述<textarea name="" >简单描述/关键词</textarea></p>
+        <p class="edit_pickimg_address">来源<input name="" type="text" value="http://"/></p>
+       
+    </form>
+  </div>
+  
+    </div>
+    <div class="edit_pickimg_content_right"><img src="../images/fenleixuanxiang/images/edit_pickimg_content_right_img.png"/></div>
+  </div>
+  <div class="edit_pickimg_bt">
+    <input name="" type="button" class="delete_pick_bt"/>
+    <input name="" type="button" class="edit_pickimg_cancel_bt"/>
+    <input name="" type="button" class="edit_pickimg_save_bt"/>
+  </div>
+</div>
+<!--消息提示弹出层-->
+<div class="message_cue_popup" id="message_cue_popup">
+ <ul id="message_cue_popup">
+   <li >
+     <h2>@我的</h2>
+     <div class="mcp_content">
+       <p class="mcp_content1">我可以收到哪些人的@消息</p>
+       <p class="mcp_content2">
+       <input name="people_1" type="radio" value="所有人" class="radio" id="a"/><label for="a" class="radio">所有人</label><input name="people_1" type="radio" value="你关注的人" class="radio" id="b"/><label for="b" class="radio">你关注的人</label>
+       </p>
+       <p class="mcp_content3"><input name="" type="button" class="mcp_content3_save"/><input name="" type="button" class="mcp_content3_close" onclick="CloseDiv('message_cue_popup','fade')"/></p>
+     </div>
+   </li>
+   <li>
+     <h2>评论</h2>
+     <div class="mcp_content">
+       <p class="mcp_content1">我可以收到哪些人的评论</p>
+       <p class="mcp_content2">
+       <input name="people_2" type="radio" value="所有人" class="radio" id="a_b"/><label for="a_b" class="radio">所有人</label><input name="people_2" type="radio" value="你关注的人" class="radio" id="b_b"/><label for="b_b" class="radio">你关注的人</label>
+       </p>
+       <p class="mcp_content3"><input name="" type="button" class="mcp_content3_save"/><input name="" type="button" class="mcp_content3_close" onclick="CloseDiv('message_cue_popup','fade')"/></p>
+     </div>
+   </li>
+   <li>
+     <h2>赞</h2>
+     <div class="mcp_content">
+       <p class="mcp_content1">我可以收到哪些人的赞</p>
+       <p class="mcp_content2">
+       <input name="people_3" type="radio" value="所有人" class="radio" id="a_c"/><label for="a_c" class="radio">所有人</label><input name="people_3" type="radio" value="你关注的人" class="radio" id="b_c"/><label for="b_c" class="radio">你关注的人</label>
+       </p>
+       <p class="mcp_content3"><input name="" type="button" class="mcp_content3_save"/><input name="" type="button" class="mcp_content3_close" onclick="CloseDiv('message_cue_popup','fade')"/></p>
+     </div>
+   </li>
+   <li style="margin:0">
+     <h2>私信</h2>
+     <div class="mcp_content">
+       <p class="mcp_content1">我可以收到哪些人的私信</p>
+       <p class="mcp_content2">
+       <input name="people_4" type="radio" value="所有人" class="radio" id="a_d"/><label for="a_d" class="radio">所有人</label><input name="people_4" type="radio" value="你关注的人" class="radio" id="b_d"/><label for="b_d" class="radio">你关注的人</label>
+       </p>
+       <p class="mcp_content3"><input name="" type="button" class="mcp_content3_save"/><input name="" type="button" class="mcp_content3_close" onclick="CloseDiv('message_cue_popup','fade')"/></p>
+     </div>
+   </li>
+ </ul>
+</div>
+<!--添加一张图片-->
+<div class="add_pic" id="add_pic">
+<div class="close_icon add_pic_close" onclick="CloseDiv('add_pic','fade')"><img src="../images/fenleixuanxiang/images/close_icon.png"/></div>
+<h2>图片来自</h2>
+<div class="add_pic_left"><a href="#"><img src="../images/fenleixuanxiang/images/earth_icon.png"/><p>网络转采</p></a></div>
+<div class="add_pic_right">
+    <form method="post" action="" enctype="multipart/form-data">
+      <input type="button" onmousemove="f.style.pixelLeft=event.x-60;f.style.pixelTop=this.offsetTop;" value="" size="30" onclick="f.click()" class="upload_img2">
+       <p>本地上传</p>
+    </form>
+</div>
+</div>
+
+
+
+
+<div id="wrapper pfwrapper">
+<!--header start-->
+<div class="pf_header">
+  <div class="pf_header_logo"><img src="../images/pick_tool_logo.png"/></div>
+  <div class="pf_header_right">
+    <ul>
+      <li><a href="0-caizhaigongju.html" class="PFahover">关于森果</a></li>
+      <li><a href="#">采摘工具</a></li>
+      <li><a href="#">新手入门</a></li>
+      <li><a href="#">加入我们</a></li>
+      <li><a href="#">联系我们</a></li>
+    </ul>
+  </div>
+</div>
+<!--header end-->
+
+<!--banner star-->
+<div class="pf_banner">
+  <ul>
+    <li><img src="../images/banner02.png"/></li>
+  </ul>
+</div>
+<!--banner end-->
+
+<!-- main start-->
+<div style=" background:#ecece9">
+<div class="pf_main">
+  <div class="fun_main1">
+    <h2>在森果&nbsp;你可以</h2>
+    <ul>
+      <li><img src="../images/fun_img01.png"/><p>搜集灵感</p></li>
+      <li><img src="../images/fun_img02.png"/><p>分享创意</p></li>
+      <li><img src="../images/fun_img03.png"/><p>认识有趣的人</p></li>
+      <li><img src="../images/fun_img04.png"/><p>婚易购</p></li>
+      <li><img src="../images/fun_img05.png"/><p>轻松赚</p></li>
+    </ul>
+    <div class="fun_video"><img src="../images/fun_video.png"/></div>
+  </div>
+  <div class="fun_main2"> 
+    <a href="#">采摘工具</a>
+  </div>
+  <div class="fun_main3">
+    <div class="fun_main3_left">
+      <div class="fun_head"><img src="../images/fun_head.png"/></div>
+      <div class="fun_word">
+      <p>策划师Busy</p>
+      <span>入行五年，我喜欢用森果收集婚礼灵感和创意，婚礼后还能分享自己的案例，这里能找到我想要的一切。</span>
+      </div>
+    </div>
+    <div class="fun_main3_right">
+      <div class="fun_main3_right1"><img src="../images/fun_pic01.png"/></div>
+      <div class="fun_main3_right2">
+        <ul>
+          <li><img src="../images/fun_pic02.png"/></li>
+          <li><img src="../images/fun_pic03.png"/></li>
+          <li><img src="../images/fun_pic04.png"/></li>
+          <li><img src="../images/fun_pic05.png"/></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="fun_main4">
+    <h2>森果荣誉勋章</h2>
+    <ul>
+      <li><img src="../images/fun_meda01.png"/></li>
+      <li><img src="../images/fun_meda02.png"/></li>
+      <li><img src="../images/fun_meda03.png"/></li>
+      <li><img src="../images/fun_meda04.png"/></li>
+      <li><img src="../images/fun_meda05.png"/></li>
+      <li><img src="../images/fun_meda06.png"/></li>
+      <li><img src="../images/fun_meda07.png"/></li>
+      <li><img src="../images/fun_meda08.png"/></li>
+      <li><img src="../images/fun_meda09.png"/></li>
+      <li style="margin:0"><img src="../images/fun_meda10.png"/></li>
+    </ul>
+    <p class="VIP_enter"><a href="#">进入会员中心</a></p>
+  </div>
+</div>
+<div class="fun_main5">
+    <h2>从森果开始 发现属于你的美好吧</h2>
+    <div class="fun_main5_picbg">
+     <div class="fun_main5_pic">
+       <span class="picbg_prev"><img src="../images/picbg_prev.png" width="64" height="64" /></span>
+       <span class="picbg_next"><img src="../images/picbg_next.png" width="64" height="64" /></span>
+       <div class="picbg_imglist">
+         <ul>
+           <li>
+             <div class="in_block">
+               <div class="in_block_p"><img src="../images/picbg_img01.png"/><a href="#" class="in_block_word">摄影</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img02.png"/><a href="#" class="in_block_word">婚礼灵感</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img03.png"/><a href="#" class="in_block_word">婚礼服饰</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img04.png"/><a href="#" class="in_block_word">海外婚礼</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+             </div>
+             <div class="in_block">
+               <div class="in_block_p"><img src="../images/picbg_img01.png"/><a href="#" class="in_block_word">婚礼纸品</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img02.png"/><a href="#" class="in_block_word">婚礼配饰</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img03.png"/><a href="#" class="in_block_word">婚礼色彩</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img04.png"/><a href="#" class="in_block_word">化妆照型</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></di>
+             </div>
+           </li>
+           <li>
+             <div class="in_block">
+               <div class="in_block_p"><img src="../images/picbg_img01.png"/><a href="#" class="in_block_word">婚礼甜品</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img02.png"/><a href="#" class="in_block_word">花艺</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img03.png"/><a href="#" class="in_block_word">回礼</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img04.png"/><a href="#" class="in_block_word">宴会设计</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+             </div>
+             <div class="in_block">
+               <div class="in_block_p"><img src="../images/picbg_img01.png"/><a href="#" class="in_block_word">婚礼灯光</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img02.png"/><a href="#" class="in_block_word">明星婚礼</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img03.png"/><a href="#" class="in_block_word">旅行</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img04.png"/><a href="#" class="in_block_word">派对</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+             </div>
+           </li>
+           <li>
+             <div class="in_block">
+               <div class="in_block_p"><img src="../images/picbg_img01.png"/><a href="#" class="in_block_word">美食</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img02.png"/><a href="#" class="in_block_word">园艺</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img03.png"/><a href="#" class="in_block_word">萌宠</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img04.png"/><a href="#" class="in_block_word">音乐</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+             </div>
+             <div class="in_block">
+               <div class="in_block_p"><img src="../images/picbg_img01.png"/><a href="#" class="in_block_word">名人明星</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img02.png"/><a href="#" class="in_block_word">美体健身</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img03.png"/><a href="#" class="in_block_word">美发美容</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img04.png"/><a href="#" class="in_block_word">家居装饰</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+             </div>
+           </li>
+           <li>
+             <div class="in_block">
+               <div class="in_block_p"><img src="../images/picbg_img01.png"/><a href="#" class="in_block_word">插图海报</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img02.png"/><a href="#" class="in_block_word">奢侈品</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img03.png"/><a href="#" class="in_block_word">手工DIY</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+               <div class="in_block_p"><img src="../images/picbg_img04.png"/><a href="#" class="in_block_word">时尚</a><p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p></div>
+             </div>
+             <div class="in_block">
+               <div class="in_block_p">
+                <img src="../images/picbg_img01.png"/><a href="#" class="in_block_word">杂志</a>
+                <p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p>
+               </div>
+               <div class="in_block_p">
+                <img src="../images/picbg_img02.png"/><a href="#" class="in_block_word">建筑</a>
+                <p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p>
+               </div>
+               <div class="in_block_p">
+                <img src="../images/picbg_img03.png"/><a href="#" class="in_block_word">设计</a> 
+                <p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p>
+               </div>
+               <div class="in_block_p">
+                <img src="../images/picbg_img04.png"/><a href="#" class="in_block_word">艺术</a>
+                <p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p>
+               </div>
+             </div>
+           </li>
+           <li>
+             <div class="in_block">
+               <div class="in_block_p">
+                 <img src="../images/picbg_img01.png"/><a href="#" class="in_block_word">科技</a>
+                 <p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p>
+               </div>
+               <div class="in_block_p">
+                 <img src="../images/picbg_img02.png"/><a href="#" class="in_block_word">汽车</a>
+                 <p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p>
+               </div>
+               <div class="in_block_p">
+                 <img src="../images/picbg_img03.png"/><a href="#" class="in_block_word">礼物</a>
+                 <p class="in_block_p_jianbian"><img src="../images/in_block_p_jianbian.png"/></p>
+               </div>
+             </div>
+           </li>
+         </ul>
+       </div>
+     </div> 
+    </div>
+<script type="text/javascript">
+ function DY_scroll(wraper,prev,next,img,speed,or)
+ { 
+  var wraper = $(wraper);
+  var prev = $(prev);
+  var next = $(next);
+  var img = $(img).find('ul');
+  var w = img.find('li').outerWidth(true);
+  var s = speed;
+  next.click(function()
+       {
+        img.animate({'margin-left':-w},function()
+                  {
+                   img.find('li').eq(0).appendTo(img);
+                   img.css({'margin-left':0});
+                   });
+        });
+  prev.click(function()
+       {
+        img.find('li:last').prependTo(img);
+        img.css({'margin-left':-w});
+        img.animate({'margin-left':0});
+        });
+  if (or == true)
+  {
+   ad = setInterval(function() { next.click();},s*5000);
+   wraper.hover(function(){clearInterval(ad);},function(){ad = setInterval(function() { next.click();},s*1000);});
+
+  }
+ }
+ DY_scroll('.fun_main5_pic','.picbg_prev','.picbg_next','.picbg_imglist',3,false);// true为自动播放，不加此参数或false就默认不自动
+</script>
+    <p class="fun_main5_bt"><a href="#">开启森果之旅</a></p>
+</div>
+</div>
+<!-- main end-->
+
+<!--footer star-->
+<div class="pf_footer">
+  <div class="pf_footer1" style=""></div>
+  <div class="pf_footer2">
+    <dl>
+      <ul>
+        <h3>森果信息</h3>
+        <li><a href="#">关于我们我们</a></li>
+        <li><a href="#">联系我们</a></li>
+        <li><a href="#">加入我们</a></li>
+      </ul>
+    </dl>
+    <dl>
+      <ul>
+        <h3>森果会员</h3>
+        <li><a href="#">会员中心</a></li>
+        <li><a href="#">用户协议</a></li>
+        <li><a href="#">商家协议</a></li>
+        <li><a href="#">商家中心</a></li>
+        <li><a href="#">帮助中心</a></li>
+      </ul>
+    </dl>
+    <dl>
+      <ul>
+        <h3>森果伙伴</h3>
+        <li><a href="#">合作商家</a></li>
+        <li><a href="#">友情链接</a></li>
+        <li><a href="#">商务合作</a></li>
+      </ul>
+    </dl>
+    <dl>
+      <ul>
+        <h3>森果声明</h3>
+        <li><a href="#">知识产权声明</a></li>
+        <li><a href="#">隐私声明</a></li>
+        <li><a href="#">免责声明</a></li>
+        <li><a href="#">图片政策</a></li>
+      </ul>
+    </dl>
+    <dl>
+      <ul>
+        <h3>关于森果</h3>
+        <li><a href="#">新浪微博</a></li>
+        <li><a href="#">微信</a></li>
+        <li><a href="#">二维码</a></li>
+      </ul>
+    </dl> 
+  </div>
+</div>
+<!--footer end-->
+</div>
+</body>
+</html>

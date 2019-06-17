@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0}
+li{ list-style:none;}
+a{  text-decoration:none; color:#000}
+a img{ border:none}
+input{ outline:none;}
+
+
+.login{ width:371px; height:582px;background:#FFF; border-radius:10px;position:absolute; left:50%; top:50%; margin-left:-185px; margin-top:-291px;}
+.login_header{width:371px; height:85px}
+.login_header img{ margin:13px 155px}
+.login_content{ height:497px; width:371px; border-radius:0 0 10px 10px; background:url(../images/images/login_content_bg.jpg) no-repeat; overflow:hidden}
+.tab_box{ margin-top:82px; border-bottom:solid 1px #74b000; height:28px}
+.tab_box ul{ padding-left:36px}
+.tab_box ul li{ float:left; border:solid 1px #74b000; height:29px; width:139px; margin-right:15px; background:#e0e0e2; line-height:29px;text-align:center; font-family:"微软雅黑"; font-size:14px ;color:#74b000; margin-top:-1px;}
+.tab_box ul li.hover{ border-bottom:none; height:29px}
+.tab_content{ margin-top:26px; text-align:left; margin-left:35px; overflow:hidden}
+.tab_content input{ border:none}
+.input_text1{ margin-bottom:13px}
+.input_text1 input{ background:url(../images/images/box1.jpg) no-repeat; width:301px; height:46px; padding-left:15px; font-family:"微软雅黑"; font-size:14px; color:#afa9a9}
+.input_text1 p,.input_text2 p{ float:right; margin-right:35px;font-family:"微软雅黑"; font-size:12px; margin-top:15px}
+.input_text1 p a{ color:#999999}
+.input_text2 p a{ color:#74b000}
+.input_text2 input{ background:url(../images/images/box2.jpg) no-repeat; width:192px; height:46px; border:none; float:left; padding-left:15px; font-family:"微软雅黑"; font-size:14px; color:#afa9a9}
+.input_text2 p{ margin-top:5px}
+.input_text3{float:left;margin-top:28px; background:url(../images/images/l_bt1.jpg) no-repeat; width:299px; height:46px; line-height:46px}
+.input_text3 ul{overflow:hidden; width:115px; margin:auto auto}
+.input_text3 ul li{ float:left; width:56px; font-family:"微软雅黑"; color:#FFFFFF}
+.input_text3 ul li a{ color:#FFFFFF; padding-left:10px; font-size:0.9em}
+.setemail{font-family:"微软雅黑"; font-size:16px; text-align:center; margin-top:55px}
+.setemail a{ color:#FFFFFF }
+.input_text4{ float:left; margin-top:10px; font-family:"微软雅黑"; font-size:14px; margin-left:58px}
+.input_text4 a{ color:#74b000}
+.bottom_icon{ margin-top:15px; float:left}
+.bottom_icon ul{ margin-left:54px} 
+.bottom_icon ul li{ float:left; margin-right:15px}
+.setemail_icon{ margin-top:44px}
+

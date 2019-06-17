@@ -1,0 +1,869 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>森果新用户</title>
+<link href="../css/web.css" rel="stylesheet" type="text/css" />
+<link href="../css/edit.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="../js/jquery.min.js"></script>
+<script language="javascript" src="../js/gotop.js"></script>
+<script language="javascript" src="../layer/layer.js"></script>
+<script language="javascript" src="../js/popup.js"></script>
+<script language="javascript" src="../js/style.js"></script>
+<script language="javascript" src="../js/divselect.js"></script>
+</head>
+
+<body>
+<!--right_float_block-->
+<div class="float_block">
+  <div class="right_float_bt1">
+    <div class="pick_tool">
+      <ul>
+        <p>使用<a href="#">采摘工具</a>收集一切美好</p>
+        <li><a href="#"  onclick="ShowDiv('upload_img','fade')"><img src="../images/fenleixuanxiang/images/pick_tool_icon1.png"/>上传图片</a></li>
+        <li><a href="#"  onclick="ShowDiv('web_pick','fade')"><img src="../images/fenleixuanxiang/images/pick_tool_icon2.png"/>按网站搜索</a></li>
+        <li><a href="#"  onclick="ShowDiv('found_fb','fade')"><img src="../images/fenleixuanxiang/images/pick_tool_icon3.png"/>新建果篮</a></li>        
+      </ul>
+    </div>
+  </div>
+  <div class="right_float_bt2">
+    <div class="rfb_share">
+      <ul>
+         <li><a href="#"><img src="../images/detial/images/detial_wechat_icon.png"/>微信</a></li>
+         <li><a href="#"><img src="../images/detial/images/detial_sina_icon.png"/>新浪微博</a></li>
+         <li><a href="#"><img src="../images/detial/images/detial_tencent_icon.png"/>腾讯微博</a></li>
+         <li><a href="#"><img src="../images/detial/images/detial_QQ_icon.png"/>QQ好友</a></li>
+         <li><a href="#"><img src="../images/detial/images/detial_dou_icon.png"/>豆瓣</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="right_float_bt3">
+    <div class="help_bg"><a href="#"></a></div>
+  </div>
+</div>
+
+<!--弹出层部分-->
+<div id="fade" class="bg_transparent"></div>
+<div id="fade2" class="bg_transparent"  onclick="CloseDiv('search_friends','fade2')"></div>
+<div class="pick_popup"  id="pick_popup">
+ <div class="pick_popup_left">
+   <div class="pick_popup_left_bg">
+    <div class="pick_popup_pic"><img src="../images/pubu_pic02.png"/></div>
+     <div class="pick_popup_content">
+       <p>森林系新娘头饰 鲜花花环 蕾丝小清新伴娘花童配饰</p>
+       <p class="pick_popup_content_pic"><img src="../images/change_icon.png" width="20" height="20" /></p>
+     </div>
+   </div>
+   <div class="pick_popup_bottom">
+       分享到：<input name="" type="checkbox" value="" /><span><a href="#">新浪微博</a></span>
+     </div>
+ </div>
+ <div class="pick_popup_right">
+<div class="close_icon"  onclick="CloseDiv('pick_popup','fade')"><img src="../images/fenleixuanxiang/images/close_icon.png"/></div>
+   <div class="pick_popup_right_content">
+     <h3>采摘到果篮</h3>
+     <span>亲！这张图片你已经采摘过了喔！</span>
+     <p><input name="" value="" type="submit" class="pick_popup_search"/><input name="" type="text" value="输入果篮"; onfocus="this.value = '';" onblur="if (this.value==''){this.value = '输入果篮'}" /></p>
+     <ul>
+       <li><img src="../images/pick_popup_head.png" width="33" height="33" /><a href="#">婚纱礼服</a><input name="" type="submit" value="" class="pick_popup_right_input"/></li>
+       <li><img src="../images/pick_popup_head02.png" width="33" height="33" /><a href="#">婚纱摄影</a><input name="" type="submit" value="" class="pick_popup_right_input"/></li>
+       <li><img src="../images/pick_popup_head03.png" width="33" height="33" /><a href="#">婚礼布置</a><input name="" type="submit" value="" class="pick_popup_right_input"/></li>
+       <li><img src="../images/pick_popup_head.png" width="33" height="33" /><a href="#">新娘手捧花</a><input name="" type="submit" value="" class="pick_popup_right_input"/></li>
+       <li><img src="../images/pick_popup_head02.png" width="33" height="33" /><a href="#">高跟鞋</a><input name="" type="submit" value="" class="pick_popup_right_input"/></li>
+       <li><img src="../images/pick_popup_head03.png" width="33" height="33" /><a href="#">婚礼花艺</a><input name="" type="submit" value="" class="pick_popup_right_input"/></li>
+       <li><img src="../images/pick_popup_head.png" width="33" height="33" /><a href="#">婚纱照</a><input name="" type="submit" value="" class="pick_popup_right_input"/></li>
+       <li><img src="../images/pick_popup_head.png" width="33" height="33" /><a href="#">婚纱礼服</a><input name="" type="submit" value="" class="pick_popup_right_input"/></li>
+       </ul>
+    <div class="addguolan" onclick="ShowDiv('found_fb','fade')"><img src="../images/pick_popup_addbox.png" width="34" height="34" />新建果篮</div>
+   </div>
+ </div> 
+</div>
+<!--查找朋友弹出层-->
+<div class="search_friends" id="search_friends">
+<div class="sf_block1">
+    <p class="sf_block1_sina"><a href="#">新浪微博</a></p>
+    <p class="sf_block1_QQ"><a href="#">腾讯QQ</a></p>
+    <p class="sf_block1_dou"><a href="#">豆瓣</a></p>
+    <p class="sf_block1_rr"><a href="#">人人网</a></p>
+  </div>
+<div class="sf_block2">
+    <div class="img_scroll">
+      <span class="prev"><img src="../images/fenleixuanxiang/images/sf_left_arrow.png"/></span>
+      <span class="next"><img src="../images/fenleixuanxiang/images/sf_right_arrow.png"/></span>
+      <div class="img_list">
+        <ul>
+            <li><img src="../images/fenleixuanxiang/images/img_list01.png"/></li>
+            <li><img src="../images/fenleixuanxiang/images/img_list02.png"/></li>
+            <li><img src="../images/fenleixuanxiang/images/img_list03.png"/></li>
+            <li><img src="../images/fenleixuanxiang/images/img_list05.png"/></li>
+            <li><img src="../images/fenleixuanxiang/images/img_list06.png"/></li>
+            <li><img src="../images/fenleixuanxiang/images/img_list07.png"/></li>
+            <li><img src="../images/fenleixuanxiang/images/img_list08.png"/></li>
+            <li><img src="../images/fenleixuanxiang/images/img_list07.png"/></li>
+            <li><img src="../images/fenleixuanxiang/images/img_list08.png"/></li>
+            <li><img src="../images/fenleixuanxiang/images/img_list07.png"/></li>
+            <li><img src="../images/fenleixuanxiang/images/img_list08.png"/></li>
+        </ul>
+    </div>
+    </div>
+    <script type="text/javascript">
+	 function DY_scroll(wraper,prev,next,img,speed,or)
+	 { 
+	  var wraper = $(wraper);
+	  var prev = $(prev);
+	  var next = $(next);
+	  var img = $(img).find('ul');
+	  var w = img.find('li').outerWidth(true);
+	  var s = speed;
+	  next.click(function()
+		   {
+			img.animate({'margin-left':-w},function()
+					  {
+					   img.find('li').eq(0).appendTo(img);
+					   img.css({'margin-left':0});
+					   });
+			});
+	  prev.click(function()
+		   {
+			img.find('li:last').prependTo(img);
+			img.css({'margin-left':-w});
+			img.animate({'margin-left':0});
+			});
+	  if (or == true)
+	  {
+	   ad = setInterval(function() { next.click();},s*1000);
+	   wraper.hover(function(){clearInterval(ad);},function(){ad = setInterval(function() { next.click();},s*1000);});
+	
+	  }
+	 }
+	 DY_scroll('.img_scroll','.prev','.next','.img_list',1,false);// true为自动播放，不加此参数或false就默认不自动
+</script>
+    <div class="sent_weibo">
+      <p class="choice_friend"><a href="#">选择你要的好友@他们</a></p>
+      <p class="check_friend"><a href="#" onclick="ShowDiv('all_friends')">查看全部好友</a></p>
+      <textarea name=""  class="text">嗨，我在森果网看到这个，推荐给你们</textarea>
+      <input name="" type="submit" value=""/>
+    </div>
+  </div>
+<div class="sf_block3">
+    <h2>好友列表</h2>
+    <ul>
+      <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+      <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+      <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+      <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+      <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+      <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+      <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+      <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+      <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+      <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+      <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+      <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+    </ul>
+  </div>
+</div>
+<!--所有朋友弹出层-->
+<div class="all_friends" id="all_friends">
+ <div class="close_icon" onclick="CloseDiv('all_friends')"><img src="../images/fenleixuanxiang/images/close_icon.png"/></div>
+ <h2>好友列表</h2>
+ <div class="pingying">拼音或英文首字母 
+ </div>
+ <form action="" method="get">
+      <div id="divselect">
+      <cite></cite>
+      <ul>
+         <li><a href="javascript:;" selectid="1"></a></li>
+         <li><a href="javascript:;" selectid="2"></a></li>
+         <li><a href="javascript:;" selectid="3"></a></li>
+         <li><a href="javascript:;" selectid="4"></a></li>
+         <li><a href="javascript:;" selectid="5"></a></li>
+         <li><a href="javascript:;" selectid="6"></a></li>
+         <li><a href="javascript:;" selectid="7"></a></li>
+         <li><a href="javascript:;" selectid="8"></a></li>
+         <li><a href="javascript:;" selectid="9"></a></li>
+      </ul>
+       </div>
+       <input name="" type="hidden" value="" id="inputselect"/>
+    </form>
+
+<div class="friends_list">
+   <ul>
+     <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+     <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list02.png"/>用户名</a></li>
+     <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list03.png"/>用户名</a></li>
+     <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list05.png"/>用户名</a></li>
+     <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+     <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list02.png"/>用户名</a></li>
+     <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+     <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list05.png"/>用户名</a></li>
+     <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+     <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list02.png"/>用户名</a></li>
+     <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list01.png"/>用户名</a></li>
+     <li><a href="#"><img src="../images/fenleixuanxiang/images/img_list05.png"/>用户名</a></li>
+   </ul>
+ </div>
+<div class="all_friends_bt">
+<input name="" type="button" class="confirm"/>
+<input name="" type="button" class="cancel"/>
+</div>
+</div>
+<!--上传一张新图片-->
+<div class="upload_img" id="upload_img">
+<div class="close_icon"  onclick="CloseDiv('upload_img','fade')"><img src="../images/fenleixuanxiang/images/close_icon.png"/></div>
+<form method="post" action="" enctype="multipart/form-data">
+<input type="button" onmousemove="f.style.pixelLeft=event.x-60;f.style.pixelTop=this.offsetTop;" value="浏览图片" size="30" onclick="f.click()" class="liulan" /><input type="text" id="txt" name="txt" class="upload_img_input" />
+<input type="file" id="f" onchange="txt.value=this.value" name="f" style="height:26px;" class="files"  size="1" hidefocus />
+<input name="" type="button" class="shangchuan" value="上传" />
+</form>
+</div>
+<!--新建果篮-->
+<div class="found_fb" id="found_fb">
+  <div class="close_icon"  onclick="CloseDiv('found_fb',('fade'))"><img src="../images/fenleixuanxiang/images/close_icon.png"/></div>
+  <h2>新建果篮</h2>
+  <div class="found_fb_content">
+    <form action="" method="get">
+       <p class="found_fb_name">名称<input name="" type="text" value="为果篮命名" ; onfocus="this.value = '';" onblur="if (this.value==''){this.value = '为果篮命名'}" /></p>
+       <p class="found_fb_dr">描述<textarea name="">简单描述/关键词</textarea></p>
+       <p class="found_fb_cf">分类 
+         </p><div id="divselect2">
+          <cite>请选择分类</cite>
+          <ul>
+             <li><a href="javascript:;" selectid="1">婚礼灵感</a></li>
+             <li><a href="javascript:;" selectid="2">婚纱服饰</a></li>
+             <li><a href="javascript:;" selectid="3">海外婚礼</a></li>
+             <li><a href="javascript:;" selectid="4">婚礼纸品</a></li>
+             <li><a href="javascript:;" selectid="5">婚礼配饰</a></li>
+             <li><a href="javascript:;" selectid="6">婚纱色彩</a></li>
+             <li><a href="javascript:;" selectid="7">化妆造型</a></li>
+             <li><a href="javascript:;" selectid="8">婚礼甜品</a></li>
+             <li><a href="javascript:;" selectid="9">宴会设计</a></li>
+             <li><a href="javascript:;" selectid="10">婚纱灯光</a></li>
+             <li><a href="javascript:;" selectid="11">明星婚礼</a></li>
+             <li><a href="javascript:;" selectid="12">美容健身</a></li>
+             <li><a href="javascript:;" selectid="13">名人明星</a></li>
+             <li><a href="javascript:;" selectid="14">美容美发</a></li>
+             <li><a href="javascript:;" selectid="15">家居装饰</a></li>
+             <li><a href="javascript:;" selectid="16">插图海报</a></li>
+             <li><a href="javascript:;" selectid="17">手工DIY</a></li>
+             <li><a href="javascript:;" selectid="18">奢侈品</a></li>
+             <li><a href="javascript:;" selectid="19">花艺</a></li>
+             <li><a href="javascript:;" selectid="20">回礼</a></li>
+             <li><a href="javascript:;" selectid="21">旅行</a></li>
+             <li><a href="javascript:;" selectid="22">派对</a></li>
+             <li><a href="javascript:;" selectid="23">美食</a></li>
+             <li><a href="javascript:;" selectid="24">园艺</a></li>
+             <li><a href="javascript:;" selectid="25">萌宠</a></li>
+             <li><a href="javascript:;" selectid="26">音乐</a></li>
+             <li><a href="javascript:;" selectid="27">时尚</a></li>
+             <li><a href="javascript:;" selectid="28">杂志</a></li>
+             <li><a href="javascript:;" selectid="29">建筑</a></li>
+             <li><a href="javascript:;" selectid="30">设计</a></li>
+             <li><a href="javascript:;" selectid="31">艺术</a></li>
+             <li><a href="javascript:;" selectid="32">科技</a></li>
+             <li><a href="javascript:;" selectid="33">汽车</a></li>
+             <li><a href="javascript:;" selectid="34">礼物</a></li>
+             <li><a href="javascript:;" selectid="35">摄影</a></li>
+             <li><a href="javascript:;" selectid="36">活动</a></li>
+          </ul>
+         </div>
+      <input name="" type="hidden" value="" id="inputselect2"/>
+       <p></p>
+       <p class="found_fb_bt">
+         <input name="" type="button" class="found_fb_confirm"/>
+         <input name="" type="button" class="found_fb_cancel" style="margin-right:-20px"/>
+       </p>
+    </form>
+  </div>
+</div>
+<!--网站采集-->
+<div class="web_pick" id="web_pick">
+<div class="close_icon" onclick="CloseDiv('web_pick','fade')"><img src="../images/fenleixuanxiang/images/close_icon.png"/></div>
+  <h2>输入网址</h2>
+  <span>使用<a href="#">采摘工具</a>搜集一切美好</span>
+  <p>
+    <input name="" value="http://" type="text" class="web_pick_text"/><a href="../site_search_next.html" class="web_pick_bt">下一步</a>
+  </p>
+  
+</div>
+<!--消息提示弹出层-->
+<div class="message_cue_popup" id="message_cue_popup">
+ <ul id="message_cue_popup">
+   <li >
+     <h2>@我的</h2>
+     <div class="mcp_content">
+       <p class="mcp_content1">我可以收到哪些人的@消息</p>
+       <p class="mcp_content2">
+       <input name="people_1" type="radio" value="所有人" class="radio" id="a"/><label for="a" class="radio">所有人</label><input name="people_1" type="radio" value="你关注的人" class="radio" id="b"/><label for="b" class="radio">你关注的人</label>
+       </p>
+       <p class="mcp_content3"><input name="" type="button" class="mcp_content3_save"/><input name="" type="button" class="mcp_content3_close" onclick="CloseDiv('message_cue_popup','fade')"/></p>
+     </div>
+   </li>
+   <li>
+     <h2>评论</h2>
+     <div class="mcp_content">
+       <p class="mcp_content1">我可以收到哪些人的评论</p>
+       <p class="mcp_content2">
+       <input name="people_2" type="radio" value="所有人" class="radio" id="a_b"/><label for="a_b" class="radio">所有人</label><input name="people_2" type="radio" value="你关注的人" class="radio" id="b_b"/><label for="b_b" class="radio">你关注的人</label>
+       </p>
+       <p class="mcp_content3"><input name="" type="button" class="mcp_content3_save"/><input name="" type="button" class="mcp_content3_close" onclick="CloseDiv('message_cue_popup','fade')"/></p>
+     </div>
+   </li>
+   <li>
+     <h2>赞</h2>
+     <div class="mcp_content">
+       <p class="mcp_content1">我可以收到哪些人的赞</p>
+       <p class="mcp_content2">
+       <input name="people_3" type="radio" value="所有人" class="radio" id="a_c"/><label for="a_c" class="radio">所有人</label><input name="people_3" type="radio" value="你关注的人" class="radio" id="b_c"/><label for="b_c" class="radio">你关注的人</label>
+       </p>
+       <p class="mcp_content3"><input name="" type="button" class="mcp_content3_save"/><input name="" type="button" class="mcp_content3_close" onclick="CloseDiv('message_cue_popup','fade')"/></p>
+     </div>
+   </li>
+   <li style="margin:0">
+     <h2>私信</h2>
+     <div class="mcp_content">
+       <p class="mcp_content1">我可以收到哪些人的私信</p>
+       <p class="mcp_content2">
+       <input name="people_4" type="radio" value="所有人" class="radio" id="a_d"/><label for="a_d" class="radio">所有人</label><input name="people_4" type="radio" value="你关注的人" class="radio" id="b_d"/><label for="b_d" class="radio">你关注的人</label>
+       </p>
+       <p class="mcp_content3"><input name="" type="button" class="mcp_content3_save"/><input name="" type="button" class="mcp_content3_close" onclick="CloseDiv('message_cue_popup','fade')"/></p>
+     </div>
+   </li>
+ </ul>
+</div>
+<!--更换关注分类弹出层-->
+<div class="choice_theme" id="choice_theme">
+ <div class="close_icon"  onclick="CloseDiv('choice_theme','fade')"><img src="../images/fenleixuanxiang/images/close_icon.png"/></div>
+   <h2>选择喜欢的5个主题</h2>
+   <div class="ct_search"><input name="" type="submit" class="ct_search_icon" value=""/><input name="" type="text" class="ct_search_text" value="搜索你感兴趣的主题"; onfocus="this.value = '';" onblur="if (this.value==''){this.value = '搜索你感兴趣的主题'}"/></div>
+   <div class="ct_content">
+     <ul>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+       <li>
+        <img src="../images/images/3_4_0_li_pic01.jpg"/><span>婚纱礼服</span>
+        <p class="add_focus"></p>
+        <p class="fade_bg"></p>
+       </li>
+     </ul>
+     </div>
+     <div class="ct_bottom">
+       <p><a href="#">还差5个哟</a></p>
+     </div>
+ </div>
+
+
+ 
+
+
+<div id="wrapper">
+  <!--header start-->
+  <div class="header">
+     <div class="header_top">
+    <div class="header_search">
+     <div class="header_search_logo"><a href="#"><img src="../images/little_logo.png"/></a></div>
+     <div class="header_search_box1">
+       <input name="" type="button" value="" class="search_icon"/>
+       <input name="" type="text" class="search_box01"/>       <div class="header_search_box1_left">
+           <div class="more_meihao">
+            <span>更多美好</span>
+            <input name="" type="submit" value="" class="more_icon01"/>
+           </div>
+           <div class="more_cf_downlist">
+             <h2>安装采摘工具<i>轻松收集一切美好</i><!-- <span>安装采摘工具</span>--></h2>
+             <ul>
+               <p>图片分类</p>
+               <li><a href="#">婚礼灵感</a></li>
+               <li><a href="#">婚纱服饰</a></li>
+               <li><a href="#">海外婚礼</a></li>
+               <li><a href="#">婚礼纸品</a></li>
+               <li><a href="#">婚礼配饰</a></li>
+               <li><a href="#">婚纱色彩</a></li>
+               <li><a href="#">化妆造型</a></li>
+               <li><a href="#">婚礼甜品</a></li>
+               <li><a href="#">宴会设计</a></li>
+               <li><a href="#">婚纱灯光</a></li>
+               <li><a href="#">明星婚礼</a></li>
+               <li><a href="#">美容健身</a></li>
+               <li><a href="#">名人明星</a></li>
+               <li><a href="#">美容美发</a></li>
+               <li><a href="#">家居装饰</a></li>
+               <li><a href="#">插图海报</a></li>
+               <li><a href="#">手工DIY</a></li>
+               <li><a href="#">奢侈品</a></li>
+               <li><a href="#">花艺</a></li>
+               <li><a href="#">回礼</a></li>
+               <li><a href="#">旅行</a></li>
+               <li><a href="#">派对</a></li>
+               <li><a href="#">美食</a></li>
+               <li><a href="#">园艺</a></li>
+               <li><a href="#">萌宠</a></li>
+               <li><a href="#">音乐</a></li>
+               <li><a href="#">时尚</a></li>
+               <li><a href="#">杂志</a></li>
+               <li><a href="#">建筑</a></li>
+               <li><a href="#">设计</a></li>
+               <li><a href="#">艺术</a></li>
+               <li><a href="#">科技</a></li>
+               <li><a href="#">汽车</a></li>
+               <li><a href="#">礼物</a></li>
+               <li><a href="#">摄影</a></li>
+               <li><a href="#">活动</a></li>
+             </ul>
+             <div class="yigou">
+               <div class="yigou_left">
+                <p>婚易购</p>
+                <dl>
+                  <dt><a href="#">婚礼服务</a><a href="#" style="margin-left:30px">婚礼服务</a></dt>
+                </dl>
+               </div>
+               <div class="yigou_right">
+                 <p>优易购</p>
+                <dl>
+                  <dt><a href="#">全球优选</a></dt>
+                </dl>
+               </div>
+             </div>
+             <div class="more_cf_downlist_nav">
+               <p><a href="#">森果信息</a></p>
+               <p><a href="#">森果会员</a></p>
+               <p><a href="#">森果声明</a></p>
+               <p><a href="#">森果伙伴</a></p>
+               <p><a href="#">关注森果</a></p>
+             </div>
+            </div>
+         </div>
+</div>
+     <div class="header_search_box2">
+       <a href="#" class="dub_01">双面娇娃</a>
+       <input name="" type="submit" value="" class="dub_03"/>
+       <div class="message_cue">
+         <ul>
+           <li><a href="#">转采<span>201</span></a></li>
+           <li><a href="#">关注<span>201</span></a></li>
+           <li><a href="#">评论<span>201</span></a></li>
+           <li><a href="#">喜欢<span>201</span></a></li>
+           <li><a href="#">关系<span>201</span></a></li>
+           <li><a href="#">私信<span>201</span></a></li>
+         </ul>
+         <p onclick="ShowDiv('message_cue_popup','fade')">消息设置</p>
+       </div>
+     </div>
+    </div>
+  </div>
+     <div class="header_bottom">
+       <img src="../images/header_bg.png"/>
+     </div>
+</div>
+<!--header end-->
+
+<!-- main start-->
+<div class="main">
+  <div class="pubu_main">
+   <div class="vertical_group">
+     <div class="vertical_group_list">
+       <p><img src="../images/new_cou_choice.jpg"/></p>
+       <p class="new_cou01"><a href="#" onclick="ShowDiv('choice_theme','fade')">更换关注分类</a></p>
+       <p class="new_cou01" style="margin-bottom:25px"><a href="#"  onclick="ShowDiv('search_friends','fade2')">发现邀请朋友</a></p>
+       <div class="cf_but"><a href="0-caizhaigongju.html">森果采摘工具</a></div>
+     </div>
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic02.png"/></a></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+             <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic02.png"/></a></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic07.png"/></a></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+   </div>
+   
+   <div class="vertical_group">
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic01.png"/></a></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+        <div class="hover_button3"></div>
+       </div>
+     </div>
+     <div class="vertical_group_list">
+       <p><img src="../images/pubu_pic01.png"/></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic05.png"/></a></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境456456456</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+   </div>
+   
+   <div class="vertical_group">
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic02.png"/></a></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic02.png"/></a></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic01.png"/></a></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic09.png"/></a></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+   </div>
+   
+   <div class="vertical_group">
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic01.png"/></a></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic01.png"/></a></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic05.png"/></a></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+   </div>
+   
+   <div class="vertical_group">
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic04.png"/></a></p>
+       <p class="group_list_title"><a href="#">波兰艺术家Jacek Yerka（吉斯凯·尤科）创造的惊人的超现实主义绘画被称为“四方”,有一种奇特的视觉——旋转画像,你会发现各个角度画面的景观融入彼此。</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+             <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic04.png"/></a></p>
+       <p class="group_list_title"><a href="#">波兰艺术家Jacek Yerka（吉斯凯·尤科）创造的惊人的超现实主义绘画被称为“四方”,有一种奇特的视觉——旋转画像,你会发现各个角度画面的景观融入彼此。</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+        <div class="hover_button3"></div>
+       </div>
+     </div>
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic08.png"/></a></p>
+       <p class="group_list_title"><a href="#">波兰艺术家Jacek Yerka（吉斯凯·尤科）创造的惊人的超现实主义绘画被称为“四方”,有一种奇特的视觉——旋转画像,你会发现各个角度画面的景观融入彼此。</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+   </div>
+   
+   <div class="vertical_group">
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic01.png"/></a></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic01.png"/></a></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+     <div class="vertical_group_list">
+       <p><a href="#"><img src="../images/pubu_pic05.png"/></a></p>
+       <p class="group_list_title"><a href="#">TIGLILY Spring/Summer 2015Wedding Dresses（一） 重现爱丽丝仙境</a></p>
+       <span><img src="../images/food_basket_icon.jpg" width="14"/><a href="#">186</a></span><span><img src="../images/collection_icon.jpg" width="12"/><a href="#">255</a></span>
+       <div class="vertical_group_list_bottom">
+           <img src="../images/little_pic.jpg" />
+           <ul> 
+             <li><a href="#"><img src="../images/little_up_arrow.jpg" width="14" height="15" />ROSA CLARÁ</a></li>
+  <li><a href="#"><img src="../images/little_down_arrow.jpg" width="14" height="15" />婚纱/婚礼</a></li>
+           </ul>
+       </div>
+       <div class="hover_button">
+         <div class="hover_button1"  onclick="ShowDiv('pick_popup','fade')"><a href="javascript:scroll(0,0)"><input name="" type="button" value="" /></a></div>
+         <div class="hover_button3"></div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+<!-- main end-->
+</div>
+</body>
+</html>
